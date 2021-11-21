@@ -1,0 +1,46 @@
+---
+swagger: "2.0"
+info:
+  version: "1.0"
+  title: 01-Pagination
+  contact: {}
+host: localhost:4003
+basePath: /api
+tags:
+- name: Misc
+  description: ""
+schemes:
+- http
+consumes:
+- application/json
+produces:
+- application/json
+paths:
+  /v1:
+    get:
+      tags:
+      - Misc
+      summary: GET PAGINATED RESULT
+      operationId: GETPAGINATEDRESULT
+      produces:
+      - application/json
+      parameters:
+      - name: limit
+        in: query
+        description: ""
+        required: true
+        type: integer
+        format: int32
+      - name: page
+        in: query
+        description: ""
+        required: true
+        type: integer
+        format: int32
+      deprecated: false
+      responses:
+        "200":
+          description: ""
+          headers: {}
+securityDefinitions: {}
+definitions: {}
